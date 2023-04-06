@@ -16,6 +16,8 @@ public class Main {
 
         Collections.sort(people, (a, b) -> compareProfiles(a, b));
 
+        people.removeIf(person -> person.getAge() < 18);
+
         for (Person person : people) {
             System.out.println(person);
         }
